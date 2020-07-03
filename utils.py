@@ -8,8 +8,7 @@ import torch
 import scipy.sparse as sp
 import re
 from functools import wraps
-import json
-import sys
+import os
 
 """
 文档title保持大小写: 有些文档的标题只有大小写不一样 (多是重定向页), 忽略大小写就无法通过标题来搜索文档了.
@@ -60,6 +59,9 @@ class SystemHelper:
         self.doc_field_dir = doc_field_dir
         self.stop_words_path = stop_words_path
         self.cache_dir = cache_dir
+        if not exists(cache_dir):
+            os.mkdir(self.cache_dir)
+
 
         # 综合的倒排记录表, 包含位置信息, tf-idf值等
         inverted_index_path = join(self.inverted_index_dir,
@@ -552,16 +554,3 @@ if __name__ == '__main__':
     #
     # print(sys_helper.doc_id2index_dic[253639])
 
-
-    # def remove_punctuation(line):
-    #     rule = re.compile(r"[^a-zA-Z0-9\u4e00-\u9fa5]")
-    #     line = rule.sub('', line)
-    #     return line
-    #
-    # def jieba_split(text):
-    #     segs = jieba.cut(text, cut_all=False)
-    #     final = []
-    #     for seg in segs:
-    #         if (seg not in self.stop_word_list):
-    #             final.append(seg)
-    #     return final

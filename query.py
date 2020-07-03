@@ -40,7 +40,7 @@ class QueryHelper:
         assert self.language in ['en', 'zh'], '请输入正确语言选项'
 
     @time_recorder
-    def search(self, query, topn=6):
+    def search(self, query: str, topn=6):
         query = query.lower()
         # 首先判断是否进行通配符查询
         if ('*' in query) or ('?' in query):
@@ -223,7 +223,7 @@ class QueryHelper:
         return similarity
 
     @time_recorder
-    def complete_query(self, query, hint_num: int = 6) -> dict:
+    def complete_query(self, query: str, hint_num: int = 6) -> dict:
         """
         查询补全, 提示所有可能的文档.
         :param query: 待补全的query
@@ -372,31 +372,8 @@ class QueryHelper:
             doc['dropped_terms'] = []
             return doc
 
-    # @time_recorder
-    # def keyword_search(self, keywords: list):
-    #     helper = self.sys_helper
-    #     docs = set()
-    #     for word in keywords:
-    #         if word not in helper.cat_inverted_index_map.keys():
-    #             continue
-    #         # 获取包含该词项的文档
-    #         posting = helper.get_cat_inverted_posting(word)
-    #         docs_including_term = posting['Attr']
-    #         for doc_id in docs_including_term:
-    #             doc_ind = helper.doc_id2index_dic[int(doc_id)]
-    #             assert doc_ind >= 0, 'doc id 错误'
-    #             docs.add(doc_ind)
-    #     docs = list(docs)
-    #
-    #     # 构造keyword vec
-    #
-    #     # 筛选doc vec
-    #
-    #     # 计算cosine
-    #     return docs
-
     @time_recorder
-    def recommend_sim_doc(self, doc_id, topn=5):
+    def recommend_sim_doc(self, doc_id: int, topn=5):
         """
         根据文档的category信息进行推荐. 将文档的category看作词项, 构造倒排表和词项文档矩阵, 根据tf-idf的思想计算其最相似的文档.
         :param doc_id:
@@ -496,7 +473,7 @@ if __name__ == '__main__':
                              config.zh_doc_text_dir, config.zh_doc_field_dir,
                              config.zh_stop_words_path, config.zh_cache_dir)
     zh_query = QueryHelper('zh', zh_helper)
-    vr1 = zh_query.search('腾讯公司')
+    r1 = zh_query.search('腾讯公司')
     # r2 = zh_query.complete_query('数')
     # r3 = zh_query.recommend_sim_doc(18)
     # r4 = zh_query.search('哲学')
