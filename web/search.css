@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+input:focus{
+    outline-color: #36c;
+
+}
+.inputform{
+	margin-top: 150px;
+	margin-left: 400px;
+	width:500px;
+	height:50px;
+}
+.searchBtn{
+	position:absolute;
+	border:1px solid #36c;
+	margin-left: 0px;
+	margin-top:150px;
+	width:60px;
+	height:55px;
+	background-color: #36c;
+
+}
+.searchBtn:hover{
+   background-color: #69f;
+   border:1px solid #69f;
+}
+.searchBtn:active{
+	background-color: #33c;
+    outline:0;
+}
+.searchBtn:focus
+{outline:0;}
+.searchlogo{
+	width:40px;
+	height:50px;
+	margin-left: -15px;	
+}
+.searchbox{
+	margin-top: -80px;
+}
+.languagebox{
+	margin-left: -52px;
+	height: 54px;
+	width: 50px;
+	border:none;
+}
+.languagebox:hover{
+	border: 1px solid #36c;
+	border-left: none;
+}
+option{
+	color:#54595d;
+	font-size: 15px;
+}
+.Wikilogo{
+	margin-top: 50px;
+	margin-left: 550px;
+}
+.Wikiword{
+	margin-top: 100px;
+	margin-left: 550px;
+}
+.auto_hidden {
+    width:204px;border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+    position:absolute;
+    display:none;
+}
+.auto_show {
+    width:204px;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+    position:absolute;
+    z-index:9999; /* 设置对象的层叠顺序 */
+    display:block;
+}
+.auto_onmouseover{
+    color:#ffffff;
+    background-color:highlight;
+    width:100%;
+}
+.auto_onmouseout{
+    color:#000000;
+    width:100%;
+    background-color:#ffffff;
+}

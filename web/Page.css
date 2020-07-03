@@ -1,0 +1,179 @@
+html, body{ margin:0; height:100%; }
+.searchboxx{
+    position: absolute;
+	margin-top: 150px;
+	background-image:searchlogo;
+}
+.inputformx{
+	position: absolute;
+	margin-left: 200px;
+	width:500px;
+	height:30px;
+}
+.searchBtnx{
+	border:1px solid #36c;
+	margin-top: 0px;
+	margin-left: 708px;
+	width:70px;
+	height:35px;
+	background-color: #36c;
+}
+.searchBtnxWord{
+	color:white;
+	font-size: 18px;
+	font-weight:bolder;
+	margin-top: 5px;
+}
+.searchBtnx:hover{
+   background-color: #69f;
+   border:1px solid #69f;
+}
+.searchBtnx:active{
+	background-color: #33c;
+    outline:0;
+}
+.searchBtnx:focus{outline:0;}
+.resultContainer{
+	width:700px;
+	margin-top: 20px;
+}
+
+.autoShowRedirect{
+	display: none;
+}
+.auto_hidden {
+    width:204px;border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+    position:absolute;
+    display:none;
+}
+.auto_show {
+    width:204px;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+    position:absolute;
+    z-index:9999; /* 设置对象的层叠顺序 */
+    display:block;
+}
+.auto_onmouseover{
+    color:#ffffff;
+    background-color:highlight;
+    width:100%;
+}
+.auto_onmouseout{
+    color:#000000;
+    width:100%;
+    background-color:#ffffff;
+}
+.keyword{
+	background-color: yellow;
+	font-weight: bold;
+}
+.dropTerms{
+	color:#C4C4C4;
+	font-size: 11px;
+}
+.pageLeft{
+	position:absolute;
+	height: 100vh;
+	width: 165px;
+	background-color: #F6F6F6;
+	border:1px solid #A7D7F9;
+	
+
+}
+.tabTop{
+	position: absolute;
+	margin-top:20px;
+	margin-left: 280px;
+	background-image: linear-gradient(#FFFFFF,#F6F6F6);
+	border:1px solid #A7D7F9;
+	border-top: none;
+	width: 80%;
+	height: 30px;
+}
+.tab{
+	position: absolute;
+	margin-left: 180px;
+	margin-top: 25px;
+	width: 90px;
+	height: 30px;
+}
+.searchResult{
+	position: absolute;
+	border-bottom: 1px solid #0F0F0F;
+	margin-top: 50px;
+	margin-left: 200px;
+	width:100%;
+}
+.searchResult p{
+	font-size: 30px;
+	font-weight: bolder;
+	margin-bottom: 5px;
+
+}
+.searchlogox{
+	position:absolute;
+	width:20px;
+	height:20px;
+	margin-top: 6px; 
+}
+.resultContainerAll{
+	position:absolute;
+	margin-left: 200px;
+	margin-top: 200px;
+}
+.docID{
+	display:none;
+}
+.recommend{
+	background:none;
+	border:none;
+	color:#696969;
+}
+.recommendList{
+	font-size: 12px;
+	margin-left: 10px;
+}
+.resultTitle{
+	font-weight: bolder;
+}
+.countResult{
+	color:#808080;
+	font-weight: bolder;
+	font-size: 15px;
+}
+.pgeBtn{
+	margin-top: 50px;
+}
+.pageNowBtn{
+	color:#696969;
+	font-size: 18px;
+	font-weight: bolder;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.pageAllBtn{
+	color:#696969; 
+	font-size: 18px;
+	font-weight: bolder;
+	margin-left: 20px;
+}
+.languageboxResult{
+	position:absolute;
+	margin-left: 670px;
+	height: 35px;
+	border-left: none;
+	border-bottom: none;
+}
+.entabWiki{
+	display: block;
+	margin-left:15px;
+	margin-top:8px;
+	text-decoration: none;
+	font-size: 14px;
+}
