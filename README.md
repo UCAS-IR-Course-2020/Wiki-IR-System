@@ -34,18 +34,18 @@
 - data_preprocess/: 数据预处理文件, 解析原始wiki dump文件 (解析数据借助了开源工具[wikiextractor](https://github.com/attardi/wikiextractor)).
 
 ### 程序运行
-1. 首先在wiki官网下载wiki dump multistream文件, 使用data_preprocess/解析文件, 产生解析后的文档和倒排记录表.
+1. 首先在wiki官网下载wiki dump multistream文件, 使用`data_preprocess/`解析文件, 产生解析后的文档和倒排记录表.
 2. 调用检索utils.SystemHelper和query.QueryHelper类, 完成检索操作, 主要函数:
     - QueryHelper.search(): 检索函数;
     - QueryHelper.complete_query(): 查询补全函数;
     - QueryHelper.recommend_sim_doc(): 推荐相似文档.
-3. 使用web/完成界面展示.
+3. 使用`web/`完成界面展示.
     1. 下载nodejs, 创建项目, 替换项目中的src文件为该web文件；
     2. 使用"npm start"命令启动前端页面；
     3. 运行server.py启动python服务。
 - 注: 界面展示模块并非必须, 也可直接通过query.py文件以终端的形式搜索.
 
-- data_preprocess解析文件步骤
+- `data_preprocess/`解析文件步骤
 ```shell
 # step1
  cd  data_preprocess/xml_process/wikiextractor-master
