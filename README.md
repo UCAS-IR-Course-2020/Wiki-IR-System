@@ -6,9 +6,11 @@ Information Retrieval System for English and Chinese wikipedia data.
 
 目前在35w文档数 (5个wiki multistream文件), 1.3亿链接数的情况下, 在普通8G内存计算机上, 平均top 10检索时长为1s左右.
 
-![](example_images/英文检索.png)
-![](example_images/中文检索.png)
-![](example_images/查询补全.png)
+![英文检索](example_images/英文检索.png)
+
+![中文检索](example_images/中文检索.png)
+
+![查询补全](example_images/查询补全.png)
 
 
 ## 代码结构
