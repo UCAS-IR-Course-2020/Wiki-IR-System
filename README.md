@@ -18,4 +18,8 @@ Information Retrieval System for English and Chinese wikipedia data.
 - web/: web服务器配置
 - data_preprocess/: 数据预处理文件, 解析原始wiki dump文件 (解析数据借助了开源工具[wikiextractor](https://github.com/attardi/wikiextractor)).
 
+## 人员分工
+- [Ren Li](https://github.com/renli1024): 检索模块
+- [jisongyang](https://github.com/jisongyang): 数据处理模块
+- [Alice828](https://github.com/Alice828): 界面展示模块
 
