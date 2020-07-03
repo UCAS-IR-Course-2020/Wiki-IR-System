@@ -331,9 +331,14 @@ class Process_data():
         print('[Info] Save category_reverse_index done.')
 
 if __name__=='__main__':
-    data_dir='xml_process\\zhwiki\\wikiextractor-master\\text'
-    xml_result_dir='xml_process\\zhwiki\\xml_result'
-    save_reverse_index_dir='result_file_zh'
+    # data_dir='xml_process\\zhwiki\\wikiextractor-master\\text'
+    # xml_result_dir='xml_process\\zhwiki\\xml_result'
+    # save_reverse_index_dir='result_file_zh'
+
+    data_dir = '../data/xml_result/zh/wikiextractor-master/text'
+    xml_result_dir='../data/xml_result/zh/xml_result'
+    save_reverse_index_dir='../data/inverted_index/zh'
+
     os.makedirs(save_reverse_index_dir,exist_ok=True)
 
     stop_word_list=[]

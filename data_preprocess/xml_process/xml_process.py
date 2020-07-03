@@ -306,12 +306,13 @@ if __name__=='__main__':
                  'enwiki//wikiextractor-master//enwiki-20200420-pages-articles-multistream7.xml-p892913p1268691',
                  'enwiki//wikiextractor-master//enwiki-20200420-pages-articles-multistream8.xml-p1268692p1791079',]
 
-    save_dir='enwiki/xml_result'
+    # save_dir='enwiki/xml_result'
+    save_dir = '../data/xml_result/en/xml_result'
     os.makedirs(save_dir,exist_ok=True)
 
     process_file=Process_xml(file_list,save_dir,top_n=-1,one_file_save_max=10000,file_count_start=36)
 
-    # process_file.get_page_in_file_list()
-    # process_file.creat_file_id_map_dict()
-    # process_file.creat_title_id_map_dict()
-    # process_file.creat_id_pl()
+    process_file.get_page_in_file_list()
+    process_file.creat_file_id_map_dict()
+    process_file.creat_title_id_map_dict()
+    process_file.creat_id_pl()

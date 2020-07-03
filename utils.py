@@ -60,8 +60,7 @@ class SystemHelper:
         self.stop_words_path = stop_words_path
         self.cache_dir = cache_dir
         if not exists(cache_dir):
-            os.mkdir(self.cache_dir)
-
+            os.makedirs(self.cache_dir)
 
         # 综合的倒排记录表, 包含位置信息, tf-idf值等
         inverted_index_path = join(self.inverted_index_dir,
