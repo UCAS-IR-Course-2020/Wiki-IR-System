@@ -51,11 +51,11 @@ class T2S(object):
 
 if __name__ == "__main__":
     print("Traditional Chinese to Simplified Chinese")
-    # input_dir = "zhwiki\\wikiextractor-master\\text\\stream1"
-    # output_dir = "zhwiki\\wikiextractor-master\\text\\stream1_simple"
-
-    input_dir = "zhwiki\\wikiextractor-master\\text\\stream2"
-    output_dir = "zhwiki\\wikiextractor-master\\text\\stream2_simple"
+    
+    # input_dir = "zhwiki/wikiextractor-master/text/stream1"
+    # output_dir = "zhwiki/wikiextractor-master/text/stream1_simple"
+    input_dir = "zhwiki/wikiextractor-master/text/stream2"
+    output_dir = "zhwiki/wikiextractor-master/text/stream2_simple"
 
     os.makedirs(output_dir,exist_ok=True)
     # T2S(infile=input, outfile=output)

@@ -73,8 +73,8 @@ class Article():
 
 if __name__=='__main__':
 
-    data_dir='xml_process\\enwiki\\wikiextractor-master\\text\\'
-    xml_result_dir = 'xml_process\\enwiki\\xml_result'
+    data_dir='xml_process/enwiki/wikiextractor-master/text/'
+    xml_result_dir = 'xml_process/enwiki/xml_result'
 
     # article
     article=Article(data_dir,xml_result_dir)

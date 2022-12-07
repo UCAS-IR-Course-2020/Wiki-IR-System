@@ -11,29 +11,29 @@ from functools import wraps
 import os
 
 """
-文档title保持大小写: 有些文档的标题只有大小写不一样 (多是重定向页), 忽略大小写就无法通过标题来搜索文档了.
-文档category忽略大小写: 因为目录会进行拆分, 目录最后会被当成关键字来计算tf-idf值, 因此消除大小写的影响.
+The document title remains case-sensitive: some document titles are only different in case (usually redirect pages), so if the case is ignored, the document cannot be located by title.
 
-doc_tt2field_dic: 标题-field的映射, doc_id2field_dic: id-field的映射.
-doc_id2index_dic: id-index的映射, 
-doc_index2id_dic: index-id的映射, 
-何为field: 文档的相关属性信息, id, title, is_redirect: 是否是重定向页, 
-redirect: 重定向目标页, is_updated: 仅仅针对重定向页, 是否已更新了index为目标页的index
+The document category ignore case: the category will be tokenized to count tf-idf value, so the case should be unified.
 
-总共有三类doc:
-1. 真实页面
+doc_tt2field_dic: map from title to field, doc_id2field_dic: map from id to field.
+doc_id2index_dic: map from id to index. 
+doc_index2id_dic: mao from index to id. 
+field: document attributes, like id, title, is_redirect 是否是重定向页, is_updated (only for redirect pages, whether update the index)
+
+Three types of document: 
+1. Real document:
     doc_tt2field_dic/doc_id2field_dic: 
         ['redirect']=''
         ['is_redirect']=False
-    doc_id2index_dic: 正常的index
-2. 重定向页面, 且所重定向的目标在数据集合中
+    doc_id2index_dic: normal index
+2. Redirect document & the page redirected to is in the dataset:
     doc_tt2field_dic/doc_id2field_dic: 
-        ['redirect']=重定向目标页的标题
+        ['redirect']=title of the page redirected to
         ['is_redirect']=True
-    doc_id2index_dic: 重定向目标页的index
-3. 重定向页面, 但所重定向的目标不在数据集合中
+    doc_id2index_dic: index of the page redirected to   
+3. Redirect document & the page redirected to is NOT in the dataset:
     doc_tt2field_dic/doc_id2field_dic: 
-        ['redirect']=重定向目标页的标题
+        ['redirect']=title of the page redirected to
         ['is_redirect']=True
     doc_id2index_dic: -1
 """

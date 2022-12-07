@@ -327,9 +327,6 @@ class Process_data():
 
 
 if __name__=='__main__':
-    # data_dir='xml_process\\enwiki\\wikiextractor-master\\text\\'        # include stream files
-    # xml_result_dir='xml_process\\enwiki\\xml_result'
-    # save_reverse_index_dir='result_file'
 
     data_dir = '../data/xml_result/en/wikiextractor-master/text'
     xml_result_dir='../data/xml_result/en/xml_result'

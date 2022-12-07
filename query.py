@@ -8,28 +8,25 @@ import re
 from utils import time_recorder
 import jieba
 '''
-wiki检索和传统的检索还是有点差别的, 需要提升在标题上的关注, 大部分会匹配标题的结果
+Some Notes: 
 
-文档相似性计算, VSM相似性, title重合度, 链接相似性, category部分
+Compared to common search engine, wikipedia search should focus more on title mathcing, instead of document content.
 
-摘要生成:
-直接返回结果的首句话+infobox内容, 并加粗page标题
+Doucment similarity measuring: title overlap, category overlap, VSM score, pagerank score
 
-[中英文适配]
+Document abstract demonstration: The first sentence + infobox content.
 
-三种查询情况所对应的返回结果: 
-1. 通配符查询
-    - dropped terms = [], 无丢弃的词项
-    - bold range =  正则表达式匹配的结果
-2. 标题查询: 严格按照标题匹配
-    - 如果有结果, 一定是第一位
-    - dropped terms = [], 无丢弃的词项
-    - bold range =  标题匹配的结果
-3. 综合查询
-    - dropped terms 为去掉的停用词列表
-    - bold range =  各个词项匹配的结果
-
-wiki的特点不太适合关键词查询, wiki上多是直接搜索页面标题, 而非根据多个关键字来组合搜索.
+Three types of search situations: 
+1. Wildcard search: 
+    - dropped terms = [] : no dropped terms
+    - bold range = regular expression mathcing results will be bolden
+2. Title search: strict matching
+    - if matching successes, the result will always show in the first place
+    - dropped terms = [] : no dropped terms
+    - bold range = the title will be bolden
+3. Comprehensive Search: 
+    - dropped terms = removed stop words
+    - bold range = the term matched
 '''
 
 
