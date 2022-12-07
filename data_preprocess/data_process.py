@@ -348,7 +348,7 @@ if __name__=='__main__':
     ###############################
     # data_process.get_category_reverse_index(save_dir=save_reverse_index_dir, stop_word_list=stop_word_list,only_english=True)
 
-    # ###############################
+    # ############################### 
     # #  Get word_reverse_index from wiki files by multiprocessing
     # ###############################
     # data_file_list=data_process.get_multi_data_file_list()

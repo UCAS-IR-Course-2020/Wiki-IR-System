@@ -58,7 +58,7 @@ if __name__ == "__main__":
     output_dir = "zhwiki/wikiextractor-master/text/stream2_simple"
 
     os.makedirs(output_dir,exist_ok=True)
-    # T2S(infile=input, outfile=output)
+    # T2S(infile=input, outfile=output) 
 
     # parser = OptionParser()
     # parser.add_option("--input", dest="input", default="", help="traditional file")

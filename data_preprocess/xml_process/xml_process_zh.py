@@ -340,7 +340,7 @@ if __name__=='__main__':
     file_list= ['zhwiki/wikiextractor-master/zhwiki-20200420-pages-articles-multistream1.xml-p1p162886',
                 'zhwiki/wikiextractor-master/zhwiki-20200420-pages-articles-multistream2.xml-p162887p544644']
 
-    # save_dir='zhwiki/xml_result'
+    # save_dir='zhwiki/xml_result' 
     save_dir='../data/xml_result/zn/xml_result'
     os.makedirs(save_dir,exist_ok=True)
 

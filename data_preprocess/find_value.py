@@ -38,7 +38,7 @@ class Article():
         else:
             return None
 
-    ## Given title,return id
+    ## Given title,return id 
     def title2id(self,word):
         if(word[0].encode('utf-8').isalpha()):
             file=os.path.join(self.xml_result_dir,'word_id_map',word[0].upper()+'.txt')

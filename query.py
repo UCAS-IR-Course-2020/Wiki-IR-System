@@ -466,25 +466,25 @@ class QueryHelper:
 
 
 if __name__ == '__main__':
-    zh_helper = SystemHelper(config.zh_inverted_index_dir,
-                             config.zh_doc_text_dir, config.zh_doc_field_dir,
-                             config.zh_stop_words_path, config.zh_cache_dir)
-    zh_query = QueryHelper('zh', zh_helper)
-    r1 = zh_query.search('腾讯公司')
+    # zh_helper = SystemHelper(config.zh_inverted_index_dir,
+    #                          config.zh_doc_text_dir, config.zh_doc_field_dir,
+    #                          config.zh_stop_words_path, config.zh_cache_dir)
+    # zh_query = QueryHelper('zh', zh_helper)
+    # r1 = zh_query.search('腾讯公司')
     # r2 = zh_query.complete_query('数')
     # r3 = zh_query.recommend_sim_doc(18)
     # r4 = zh_query.search('哲学')
-    print(1)
-
-    # en_helper = SystemHelper(config.en_inverted_index_dir,
-    #                           config.en_doc_text_dir, config.en_doc_field_dir,
-    #                           config.en_stop_words_path, config.en_cache_dir)
-    # en_query = QueryHelper('en', en_helper)
-    # sim_docs = en_query.recommend_sim_doc(400508)
-    # hint_res = en_query.complete_query('g')
-    #
-    # r1 = en_query.search('the timeline of anarchism', 6)
-    # # r2 = en_query.search('Triumph of the Will', 6)
-    # # r3 = en_query.search('an*chism', 6)
-    # # r4 = en_query.search('g*gle', 6)
     # print(1)
+
+    en_helper = SystemHelper(config.en_inverted_index_dir,
+                              config.en_doc_text_dir, config.en_doc_field_dir,
+                              config.en_stop_words_path, config.en_cache_dir)
+    en_query = QueryHelper('en', en_helper)
+    sim_docs = en_query.recommend_sim_doc(400508)
+    hint_res = en_query.complete_query('google')
+    
+    r1 = en_query.search('the timeline of anarchism', 6)
+    # r2 = en_query.search('Triumph of the Will', 6)
+    # r3 = en_query.search('an*chism', 6)
+    # r4 = en_query.search('g*gle', 6)
+    print(1)

@@ -297,14 +297,14 @@ class Process_page():
             self.category_generate(self.category_text_list)
 
 if __name__=='__main__':
-    # file_list = ['enwiki//wikiextractor-master//enwiki-20200420-pages-articles-multistream1.xml-p1p30303',
-    #              'enwiki//wikiextractor-master//enwiki-20200420-pages-articles-multistream2.xml-p30304p88444',
-    #              'enwiki//wikiextractor-master//enwiki-20200420-pages-articles-multistream3.xml-p88445p200509',
-    #              'enwiki//wikiextractor-master//enwiki-20200420-pages-articles-multistream4.xml-p200510p352689',
-    #              'enwiki//wikiextractor-master//enwiki-20200420-pages-articles-multistream5.xml-p352690p565313']
-    file_list = ['enwiki//wikiextractor-master//enwiki-20200420-pages-articles-multistream6.xml-p565314p892912',
-                 'enwiki//wikiextractor-master//enwiki-20200420-pages-articles-multistream7.xml-p892913p1268691',
-                 'enwiki//wikiextractor-master//enwiki-20200420-pages-articles-multistream8.xml-p1268692p1791079',]
+    # file_list = ['enwiki/wikiextractor-master/enwiki-20200420-pages-articles-multistream1.xml-p1p30303',
+    #              'enwiki/wikiextractor-master/enwiki-20200420-pages-articles-multistream2.xml-p30304p88444',
+    #              'enwiki/wikiextractor-master/enwiki-20200420-pages-articles-multistream3.xml-p88445p200509',
+    #              'enwiki/wikiextractor-master/enwiki-20200420-pages-articles-multistream4.xml-p200510p352689',
+    #              'enwiki/wikiextractor-master/enwiki-20200420-pages-articles-multistream5.xml-p352690p565313']
+    file_list = ['enwiki/wikiextractor-master/enwiki-20200420-pages-articles-multistream6.xml-p565314p892912',
+                 'enwiki/wikiextractor-master/enwiki-20200420-pages-articles-multistream7.xml-p892913p1268691',
+                 'enwiki/wikiextractor-master/enwiki-20200420-pages-articles-multistream8.xml-p1268692p1791079',]
 
     # save_dir='enwiki/xml_result'
     save_dir = '../data/xml_result/en/xml_result'

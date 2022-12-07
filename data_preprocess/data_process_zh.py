@@ -347,7 +347,7 @@ if __name__=='__main__':
 
     data_process=Process_data(data_dir,xml_result_dir,save_reverse_index_dir,stop_word_list)
 
-    ################################
+    ################################ 
     ##  Get category_reverse_index from xml result files
     ################################
     # data_process.get_category_reverse_index(save_dir=save_reverse_index_dir, stop_word_list=stop_word_list)

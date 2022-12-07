@@ -551,5 +551,5 @@ if __name__ == '__main__':
     #                           config.en_doc_text_dir, config.en_doc_field_dir,
     #                           config.en_stop_words_path, config.en_cache_dir)
     #
-    # print(sys_helper.doc_id2index_dic[253639])
+    # print(sys_helper.doc_id2index_dic[253639]) 
 
