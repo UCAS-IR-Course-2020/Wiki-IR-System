@@ -1,5 +1,5 @@
 # Wiki-IR-System
-This is the course project of Introduction to Information Retrieval in Spring Semester, 2020, University of Chinese Academy of Sciences, which realizes a Wikipedia Information Retrieval System, i.e. search engine, in English and Chinese.
+This is the course project of Introduction to Information Retrieval in Spring Semester, 2020, University of Chinese Academy of Sciences, which realizes a Wikipedia information retrieval system, i.e. search engine, in English and Chinese.
 
 ## Project Participants
 - [Ren Li](https://github.com/renli1024): Searching Algorithm Module
@@ -25,7 +25,7 @@ By test, for data scale of 350,000 documents and 130,000,000 inter-doc links, th
 
 ## System Optimizations
 1. Before searching, filter the documents by matching query words to remove the large proportion of irrelevant docs. 
-2. Store the inverted-index into a set of disk files to prevent the memory space consumption. Meanwhile maintain a map record between the index term and corresponding file location, which can improve the file locating time from O(n) to O(1). 
+2. Store the inverted-index into a set of disk files to prevent the memory space consumption. Meanwhile maintain a map record between the index term and the corresponding file location, which can reduce the file locating time from O(n) to O(1). 
 3. Transform the bottom matrix implementation to sparse format, which can greatly improve the space and time computing complexity. 
 The space complexity of term-document matrix is reduced from O(mn) to O(t), where m is the number of document, n is the number of term and t is the total number of words (usually much smaller than mn); the space complexity of link importance matrix is reduced from O(m^2) to O(e), where e is the number of links (much smaller than m^2).
 4. For top k search, improve the document sorting process to partition and sorting two steps. First partition docs into the largest k and others, which consumes O(m) complexity. Then only sort the top k objects, which consumes O(klogk) complexity (usually very small). This can reduce the sorting consumption from O(mlogm) to O(m) complexity. 
@@ -41,15 +41,15 @@ The space complexity of term-document matrix is reduced from O(mn) to O(t), wher
 ## Project Running
 1. Download wiki dump files from the official [website](https://dumps.wikimedia.org/backup-index.html). Run `data_preprocess/` code to parse files and generate documents and inverted-index (specific steps in the following). 
 2. Run the `query.py` file to conudct the searching, which includes: 
-    - `QueryHelper`: main class;
-    - `QueryHelper.search()`: search function;
-    - `QueryHelper.complete_query()`: query suggestion function;
-    - `QueryHelper.recommend_sim_doc()`: relevant document recommendation function.
+    - `QueryHelper`: main class
+    - `QueryHelper.search()`: search function
+    - `QueryHelper.complete_query()`: query suggestion function
+    - `QueryHelper.recommend_sim_doc()`: relevant document recommendation function
 3. Run the `web/` code to demonstrate results in the graphical interface: 
-    1. Download Node.js JavaScript runtime;
-    2. Execute `npm start` command to start the web service;
-    3. Run `server.py` to start the python program;
-- Note: The `web/` module is not necessary. It is also possible to demonstrate `query.py` results in the terminal interface.
+    1. Download Node.js JavaScript runtime
+    2. Execute `npm start` command to start the web service
+    3. Run `server.py` to start the python program
+- Note that the `web/` module is not necessary. The `query.py` results can be also demonstrated by terminal.
 
 - Specific procedures of `data_preprocess/` code:
 ```shell
