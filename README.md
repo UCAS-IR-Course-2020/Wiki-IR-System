@@ -3,8 +3,8 @@ This is the course project of Introduction to Information Retrieval in Spring Se
 
 ## Project Participants
 - [Ren Li](https://github.com/renli1024): Searching Algorithm Module
-- [jisongyang](https://github.com/jisongyang): Data Processing Module
-- [Alice828](https://github.com/Alice828): Graphical Interface Module
+- [Jisong Yang](https://github.com/jisongyang): Data Processing Module
+- [Rui Zhang](https://github.com/Alice828): Graphical Interface Module
 
 
 ## Introduction
